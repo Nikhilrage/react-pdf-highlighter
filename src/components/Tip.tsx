@@ -49,7 +49,7 @@ export class Tip extends Component<Props, State> {
             style={{ color: "#029FB3", width: 27, height: 30 }}
           />
           <div style={{ fontWeight: 500, fontSize: 16, color: "#000" }}>
-            Registry
+            Registrys
           </div>
         </div>
         <div style={{ marginBottom: 27 }}>
