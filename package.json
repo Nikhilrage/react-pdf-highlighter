@@ -11,7 +11,8 @@
     "react-component"
   ],
   "files": [
-    "dist"
+    "dist/cjs",
+    "dist/esm"
   ],
   "types": "./dist/esm/index.d.ts",
   "main": "./dist/cjs/index.js",
