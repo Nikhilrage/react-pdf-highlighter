@@ -44,7 +44,7 @@ export class Tip extends Component<Props, State> {
               this.setState({ compact: false });
             }}
           >
-            Add highlight
+            Add highlightgjgjgjgj
           </div>
         ) : (
           <form
