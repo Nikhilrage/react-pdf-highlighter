@@ -26,6 +26,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Tip = void 0;
 const react_1 = __importStar(require("react"));
 require("../style/Tip.css");
+const ri_1 = require("react-icons/ri");
 class Tip extends react_1.Component {
     constructor() {
         super(...arguments);
@@ -45,24 +46,46 @@ class Tip extends react_1.Component {
     render() {
         const { onConfirm, onOpen } = this.props;
         const { compact, text, emoji } = this.state;
-        return (react_1.default.createElement("div", { className: "Tip" }, compact ? (react_1.default.createElement("div", { className: "Tip__compact", onClick: () => {
-                onOpen();
-                this.setState({ compact: false });
-            } }, "Add highlightgjgjgjgj")) : (react_1.default.createElement("form", { className: "Tip__card", onSubmit: (event) => {
-                event.preventDefault();
-                onConfirm({ text, emoji });
-            } },
-            react_1.default.createElement("div", null,
-                react_1.default.createElement("textarea", { placeholder: "Your comment", autoFocus: true, value: text, onChange: (event) => this.setState({ text: event.target.value }), ref: (node) => {
+        console.log({ onConfirm, onOpen, compact, text, emoji });
+        return (react_1.default.createElement("div", { className: "Tip__card" },
+            react_1.default.createElement("div", { style: {
+                    display: "flex",
+                    justifyContent: "start",
+                    alignItems: "center",
+                    columnGap: 7,
+                    marginBottom: 28,
+                } },
+                react_1.default.createElement(ri_1.RiAccountCircleLine, { style: { color: "#029FB3", width: 27, height: 30 } }),
+                react_1.default.createElement("div", { style: { fontWeight: 500, fontSize: 16, color: "#000" } }, "Registry")),
+            react_1.default.createElement("div", { style: { marginBottom: 27 } },
+                react_1.default.createElement("input", { type: "text", placeholder: "Type your answer here...", autoFocus: true, value: text, onChange: (event) => this.setState({ text: event.target.value }), ref: (node) => {
                         if (node) {
                             node.focus();
                         }
-                    } }),
-                react_1.default.createElement("div", null, ["💩", "😱", "😍", "🔥", "😳", "⚠️"].map((_emoji) => (react_1.default.createElement("label", { key: _emoji },
-                    react_1.default.createElement("input", { checked: emoji === _emoji, type: "radio", name: "emoji", value: _emoji, onChange: (event) => this.setState({ emoji: event.target.value }) }),
-                    _emoji))))),
+                    }, style: {} })),
             react_1.default.createElement("div", null,
-                react_1.default.createElement("input", { type: "submit", value: "Save" }))))));
+                react_1.default.createElement("button", { style: {
+                        background: "#BED7FE",
+                        color: "#0D0E0E",
+                        fontWeight: 500,
+                        fontSize: 14,
+                        padding: "9px 24px",
+                        border: "none",
+                        borderRadius: "24px",
+                        marginRight: 10,
+                        fontFamily: "Poppins",
+                    } }, "Comment"),
+                react_1.default.createElement("button", { onClick: () => console.log("saved"), style: {
+                        background: "#fff",
+                        color: "#0D0E0E",
+                        fontWeight: 500,
+                        fontSize: 14,
+                        padding: "8px 24px",
+                        border: "1px solid #BED7FE",
+                        borderRadius: "24px",
+                        marginRight: 10,
+                        fontFamily: "Poppins",
+                    } }, "Save"))));
     }
 }
 exports.Tip = Tip;
