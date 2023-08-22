@@ -58,7 +58,9 @@ class TipContainer extends react_1.Component {
         const isStyleCalculationInProgress = width === 0 && height === 0;
         const shouldMove = style.top - height - 5 < scrollTop;
         const top = shouldMove ? style.bottom + 5 : style.top - height - 5;
+        //REMOVE left at end
         const left = clamp(style.left - width / 2, 0, pageBoundingRect.width - width);
+        console.log(left);
         const childrenWithProps = react_1.default.Children.map(children, (child) => 
         // @ts-ignore
         react_1.default.cloneElement(child, {
@@ -77,7 +79,8 @@ class TipContainer extends react_1.Component {
         return (react_1.default.createElement("div", { className: "PdfHighlighter__tip-container", style: {
                 visibility: isStyleCalculationInProgress ? "hidden" : "visible",
                 top,
-                left,
+                right: 10,
+                //left,
             }, ref: (node) => {
                 this.node = node;
             } }, childrenWithProps));
