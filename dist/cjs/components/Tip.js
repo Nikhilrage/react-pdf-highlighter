@@ -56,7 +56,7 @@ class Tip extends react_1.Component {
                     marginBottom: 28,
                 } },
                 react_1.default.createElement(ri_1.RiAccountCircleLine, { style: { color: "#029FB3", width: 27, height: 30 } }),
-                react_1.default.createElement("div", { style: { fontWeight: 500, fontSize: 16, color: "#000" } }, "Registrys")),
+                react_1.default.createElement("div", { style: { fontWeight: 500, fontSize: 16, color: "#000" } }, "Registry")),
             react_1.default.createElement("div", { style: { marginBottom: 27 } },
                 react_1.default.createElement("input", { type: "text", placeholder: "Type your answer here...", autoFocus: true, value: text, onChange: (event) => this.setState({ text: event.target.value }), ref: (node) => {
                         if (node) {

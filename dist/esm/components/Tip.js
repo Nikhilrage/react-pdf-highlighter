@@ -30,7 +30,7 @@ export class Tip extends Component {
                     marginBottom: 28,
                 } },
                 React.createElement(RiAccountCircleLine, { style: { color: "#029FB3", width: 27, height: 30 } }),
-                React.createElement("div", { style: { fontWeight: 500, fontSize: 16, color: "#000" } }, "Registrys")),
+                React.createElement("div", { style: { fontWeight: 500, fontSize: 16, color: "#000" } }, "Registry")),
             React.createElement("div", { style: { marginBottom: 27 } },
                 React.createElement("input", { type: "text", placeholder: "Type your answer here...", autoFocus: true, value: text, onChange: (event) => this.setState({ text: event.target.value }), ref: (node) => {
                         if (node) {
