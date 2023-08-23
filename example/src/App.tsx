@@ -16,7 +16,7 @@ import { Spinner } from "./Spinner";
 //import { Sidebar } from "./Sidebar";
 
 import "./style/App.css";
-import CommentsSideBar from "./CommentsSideBar";
+import { CommentsSideBar } from "../../src/components/CommentsSideBar";
 
 const testHighlights: Record<string, Array<IHighlight>> = _testHighlights;
 

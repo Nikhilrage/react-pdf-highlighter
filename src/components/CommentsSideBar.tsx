@@ -1,7 +1,7 @@
 import React from "react";
 import { RiAccountCircleLine } from "react-icons/ri";
 
-const CommentsSideBar = () => {
+export const CommentsSideBar = () => {
   return (
     <div>
       {commentsData?.map((i: any, index: number) => (
@@ -23,8 +23,6 @@ const CommentsSideBar = () => {
     </div>
   );
 };
-
-export default CommentsSideBar;
 
 interface CommentBoxProps {
   time: string;
