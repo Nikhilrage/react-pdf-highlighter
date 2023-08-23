@@ -94,12 +94,16 @@ export class PdfLoader extends Component<Props, State> {
     const { pdfDocument, error } = this.state;
     return (
       <>
-        <span ref={this.documentRef} />
-        {error
-          ? this.renderError()
-          : !pdfDocument || !children
-          ? beforeLoad
-          : children(pdfDocument)}
+        <div>
+          <div>
+            <span ref={this.documentRef} />
+            {error
+              ? this.renderError()
+              : !pdfDocument || !children
+              ? beforeLoad
+              : children(pdfDocument)}
+          </div>
+        </div>
       </>
     );
   }

@@ -56,12 +56,14 @@ export class PdfLoader extends Component {
         const { children, beforeLoad } = this.props;
         const { pdfDocument, error } = this.state;
         return (React.createElement(React.Fragment, null,
-            React.createElement("span", { ref: this.documentRef }),
-            error
-                ? this.renderError()
-                : !pdfDocument || !children
-                    ? beforeLoad
-                    : children(pdfDocument)));
+            React.createElement("div", null,
+                React.createElement("div", null,
+                    React.createElement("span", { ref: this.documentRef }),
+                    error
+                        ? this.renderError()
+                        : !pdfDocument || !children
+                            ? beforeLoad
+                            : children(pdfDocument)))));
     }
     renderError() {
         const { errorMessage } = this.props;

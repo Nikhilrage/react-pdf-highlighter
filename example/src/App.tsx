@@ -16,6 +16,7 @@ import { Spinner } from "./Spinner";
 //import { Sidebar } from "./Sidebar";
 
 import "./style/App.css";
+import CommentsSideBar from "./CommentsSideBar";
 
 const testHighlights: Record<string, Array<IHighlight>> = _testHighlights;
 
@@ -226,6 +227,7 @@ class App extends Component<{}, State> {
             )}
           </PdfLoader>
         </div>
+        <CommentsSideBar />
       </div>
     );
   }
