@@ -101,7 +101,7 @@ export class Tip extends Component<Props, State> {
               fontFamily: "Poppins",
             }}
           >
-            Save
+            Cancel
           </button>
         </div>
       </div>

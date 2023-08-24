@@ -88,7 +88,7 @@ class Tip extends react_1.Component {
                         borderRadius: "24px",
                         marginRight: 10,
                         fontFamily: "Poppins",
-                    } }, "Save"))));
+                    } }, "Cancel"))));
     }
 }
 exports.Tip = Tip;

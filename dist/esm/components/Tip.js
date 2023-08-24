@@ -62,7 +62,7 @@ export class Tip extends Component {
                         borderRadius: "24px",
                         marginRight: 10,
                         fontFamily: "Poppins",
-                    } }, "Save"))));
+                    } }, "Cancel"))));
     }
 }
 //<form
