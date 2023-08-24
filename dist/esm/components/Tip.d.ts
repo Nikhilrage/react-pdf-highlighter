@@ -19,4 +19,4 @@ export declare class Tip extends Component<Props, State> {
     componentDidUpdate(nextProps: Props, nextState: State): void;
     render(): JSX.Element;
 }
-export default Tip;
+export {};

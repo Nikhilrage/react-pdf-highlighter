@@ -35,8 +35,8 @@ export class Tip extends Component<Props, State> {
   }
 
   render() {
-    const { text } = this.state;
-
+    const { text, emoji } = this.state;
+    const { onConfirm } = this.props;
     return (
       <div className="Tip__card">
         <div
@@ -72,6 +72,7 @@ export class Tip extends Component<Props, State> {
         </div>
         <div>
           <button
+            onClick={() => onConfirm({ text, emoji })}
             style={{
               background: "#BED7FE",
               color: "#0D0E0E",
