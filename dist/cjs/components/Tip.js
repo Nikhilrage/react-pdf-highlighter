@@ -27,6 +27,7 @@ exports.Tip = void 0;
 const react_1 = __importStar(require("react"));
 const ri_1 = require("react-icons/ri");
 require("../style/Tip.css");
+const ri_1 = require("react-icons/ri");
 class Tip extends react_1.Component {
     constructor() {
         super(...arguments);
@@ -48,8 +49,14 @@ class Tip extends react_1.Component {
         }
     }
     render() {
+<<<<<<< HEAD
         const { onConfirm } = this.props;
         const { text, emoji } = this.state;
+=======
+        const { onConfirm, onOpen } = this.props;
+        const { compact, text, emoji } = this.state;
+        console.log({ onConfirm, onOpen, compact, text, emoji });
+>>>>>>> 82acbe3e15ba86aec64ba32051de54c46f27f239
         return (react_1.default.createElement("div", { className: "Tip__card" },
             react_1.default.createElement("div", { style: {
                     display: "flex",
@@ -67,7 +74,11 @@ class Tip extends react_1.Component {
                         }
                     }, style: {} })),
             react_1.default.createElement("div", null,
+<<<<<<< HEAD
                 react_1.default.createElement("button", { onClick: () => onConfirm({ text, emoji }), style: {
+=======
+                react_1.default.createElement("button", { style: {
+>>>>>>> 82acbe3e15ba86aec64ba32051de54c46f27f239
                         background: "#BED7FE",
                         color: "#0D0E0E",
                         fontWeight: 500,
@@ -88,7 +99,11 @@ class Tip extends react_1.Component {
                         borderRadius: "24px",
                         marginRight: 10,
                         fontFamily: "Poppins",
+<<<<<<< HEAD
                     } }, "Cancel"))));
+=======
+                    } }, "Save"))));
+>>>>>>> 82acbe3e15ba86aec64ba32051de54c46f27f239
     }
 }
 exports.Tip = Tip;

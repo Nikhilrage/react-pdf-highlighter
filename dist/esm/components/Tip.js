@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { RiAccountCircleLine } from "react-icons/ri";
 import "../style/Tip.css";
+import { RiAccountCircleLine } from "react-icons/ri";
 export class Tip extends Component {
     constructor() {
         super(...arguments);
@@ -22,8 +23,14 @@ export class Tip extends Component {
         }
     }
     render() {
+<<<<<<< HEAD
         const { onConfirm } = this.props;
         const { text, emoji } = this.state;
+=======
+        const { onConfirm, onOpen } = this.props;
+        const { compact, text, emoji } = this.state;
+        console.log({ onConfirm, onOpen, compact, text, emoji });
+>>>>>>> 82acbe3e15ba86aec64ba32051de54c46f27f239
         return (React.createElement("div", { className: "Tip__card" },
             React.createElement("div", { style: {
                     display: "flex",
@@ -41,7 +48,11 @@ export class Tip extends Component {
                         }
                     }, style: {} })),
             React.createElement("div", null,
+<<<<<<< HEAD
                 React.createElement("button", { onClick: () => onConfirm({ text, emoji }), style: {
+=======
+                React.createElement("button", { style: {
+>>>>>>> 82acbe3e15ba86aec64ba32051de54c46f27f239
                         background: "#BED7FE",
                         color: "#0D0E0E",
                         fontWeight: 500,
@@ -62,7 +73,11 @@ export class Tip extends Component {
                         borderRadius: "24px",
                         marginRight: 10,
                         fontFamily: "Poppins",
+<<<<<<< HEAD
                     } }, "Cancel"))));
+=======
+                    } }, "Save"))));
+>>>>>>> 82acbe3e15ba86aec64ba32051de54c46f27f239
     }
 }
 export default Tip;

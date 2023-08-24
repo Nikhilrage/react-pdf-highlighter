@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { RiAccountCircleLine } from "react-icons/ri";
 import "../style/Tip.css";
+import { RiAccountCircleLine } from "react-icons/ri";
 
 interface State {
   compact: boolean;
@@ -35,8 +35,7 @@ export class Tip extends Component<Props, State> {
   }
 
   render() {
-    const { onConfirm } = this.props;
-    const { text, emoji } = this.state;
+    const { text } = this.state;
 
     return (
       <div className="Tip__card">
@@ -73,7 +72,6 @@ export class Tip extends Component<Props, State> {
         </div>
         <div>
           <button
-            onClick={() => onConfirm({ text, emoji })}
             style={{
               background: "#BED7FE",
               color: "#0D0E0E",
@@ -102,28 +100,12 @@ export class Tip extends Component<Props, State> {
               fontFamily: "Poppins",
             }}
           >
-            Cancel
+            Save
           </button>
         </div>
       </div>
     );
   }
-}
-
-export default Tip;
-{
-  /*<div className="Tip">
-        {/*{compact ? (
-          <div
-            className="Tip__compact"
-            onClick={() => {
-              onOpen();
-              this.setState({ compact: false });
-            }}
-          >
-            Add highlightgjgjgjgj
-          </div>
-        ) : (*/
 }
 //<form
 //  className="Tip__card"

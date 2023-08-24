@@ -13,9 +13,10 @@ import type { IHighlight, NewHighlight } from "./react-pdf-highlighter";
 
 import { testHighlights as _testHighlights } from "./test-highlights";
 import { Spinner } from "./Spinner";
-import { Sidebar } from "./Sidebar";
+//import { Sidebar } from "./Sidebar";
 
 import "./style/App.css";
+import { CommentsSideBar } from "../../src/components/CommentsSideBar";
 
 const testHighlights: Record<string, Array<IHighlight>> = _testHighlights;
 
@@ -134,14 +135,14 @@ class App extends Component<{}, State> {
 
   render() {
     const { url, highlights } = this.state;
-
+    console.log("highlights: ", highlights);
     return (
       <div className="App" style={{ display: "flex", height: "100vh" }}>
-        <Sidebar
+        {/*<Sidebar
           highlights={highlights}
           resetHighlights={this.resetHighlights}
           toggleDocument={this.toggleDocument}
-        />
+        />*/}
         <div
           style={{
             height: "100vh",
@@ -235,6 +236,7 @@ class App extends Component<{}, State> {
             )}
           </PdfLoader>
         </div>
+        <CommentsSideBar />
       </div>
     );
   }

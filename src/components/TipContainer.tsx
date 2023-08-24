@@ -58,12 +58,13 @@ class TipContainer extends Component<Props, State> {
     const shouldMove = style.top - height - 5 < scrollTop;
 
     const top = shouldMove ? style.bottom + 5 : style.top - height - 5;
-
+    //REMOVE left at end
     const left = clamp(
       style.left - width / 2,
       0,
       pageBoundingRect.width - width
     );
+    console.log(left);
 
     const childrenWithProps = React.Children.map(children, (child) =>
       // @ts-ignore
@@ -91,7 +92,8 @@ class TipContainer extends Component<Props, State> {
         style={{
           visibility: isStyleCalculationInProgress ? "hidden" : "visible",
           top,
-          left,
+          right: 10,
+          //left,
         }}
         ref={(node) => {
           this.node = node;

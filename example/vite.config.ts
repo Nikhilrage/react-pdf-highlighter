@@ -8,7 +8,7 @@ export default defineConfig({
   },
   plugins: [reactRefresh()],
   server: {
-    port: 4001,
+    port: 4000,
   },
   define: {
     APP_VERSION: JSON.stringify(process.env.npm_package_version),
