@@ -13,6 +13,7 @@ import { viewportToScaled } from "../lib/coordinates";
 import React from "react";
 export function HighlightLayer({ highlightsByPage, scaledPositionToViewport, pageNumber, scrolledToHighlightId, highlightTransform, tip, hideTipAndSelection, viewer, screenshot, showTip, setState, }) {
     const currentHighlights = highlightsByPage[String(pageNumber)] || [];
+    console.log("highlightsByPage: ", highlightsByPage);
     return (React.createElement("div", null, currentHighlights.map((_a, index) => {
         var { position, id } = _a, highlight = __rest(_a, ["position", "id"]);
         // @ts-ignore

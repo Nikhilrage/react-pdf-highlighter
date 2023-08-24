@@ -185,6 +185,15 @@ class App extends Component<{}, State> {
                   screenshot,
                   isScrolledTo
                 ) => {
+                  console.log("highlightTransform values: ", {
+                    highlight,
+                    index,
+                    setTip,
+                    hideTip,
+                    viewportToScaled,
+                    screenshot,
+                    isScrolledTo,
+                  });
                   const isTextHighlight = !Boolean(
                     highlight.content && highlight.content.image
                   );

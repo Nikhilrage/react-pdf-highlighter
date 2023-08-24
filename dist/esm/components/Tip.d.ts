@@ -15,6 +15,7 @@ interface Props {
 }
 export declare class Tip extends Component<Props, State> {
     state: State;
+    componentDidMount(): void;
     componentDidUpdate(nextProps: Props, nextState: State): void;
     render(): JSX.Element;
 }

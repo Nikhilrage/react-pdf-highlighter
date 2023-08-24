@@ -48,6 +48,7 @@ export function HighlightLayer<T_HT extends IHighlight>({
   setState,
 }: HighlightLayerProps<T_HT>) {
   const currentHighlights = highlightsByPage[String(pageNumber)] || [];
+  console.log("highlightsByPage: ", highlightsByPage);
   return (
     <div>
       {currentHighlights.map(({ position, id, ...highlight }, index) => {

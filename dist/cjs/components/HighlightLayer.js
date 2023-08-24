@@ -19,6 +19,7 @@ const coordinates_1 = require("../lib/coordinates");
 const react_1 = __importDefault(require("react"));
 function HighlightLayer({ highlightsByPage, scaledPositionToViewport, pageNumber, scrolledToHighlightId, highlightTransform, tip, hideTipAndSelection, viewer, screenshot, showTip, setState, }) {
     const currentHighlights = highlightsByPage[String(pageNumber)] || [];
+    console.log("highlightsByPage: ", highlightsByPage);
     return (react_1.default.createElement("div", null, currentHighlights.map((_a, index) => {
         var { position, id } = _a, highlight = __rest(_a, ["position", "id"]);
         // @ts-ignore

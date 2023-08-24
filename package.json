@@ -30,7 +30,7 @@
     "format": "prettier --write './**/*.{js,ts,tsx}'",
     "format:check": "prettier --check './**/*.{js,ts,tsx}'",
     "clean": "shx rm -rf dist"
-  },  
+  },
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0"
@@ -38,6 +38,7 @@
   "dependencies": {
     "lodash.debounce": "^4.0.8",
     "pdfjs-dist": "2.16.105",
+    "react-icons": "^4.10.1",
     "react-rnd": "^10.1.10",
     "shx": "^0.3.4"
   },
