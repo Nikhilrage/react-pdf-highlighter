@@ -208,7 +208,7 @@ class PdfHighlighter extends react_1.PureComponent {
                 return;
             }
             const pages = (0, pdfjs_dom_1.getPagesFromRange)(range);
-            if (!pages || pages.length === 0) {
+            if (!pages || pages.length === 0 || pages[0].number < 5) {
                 return;
             }
             const rects = (0, get_client_rects_1.default)(range, pages);

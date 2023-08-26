@@ -179,7 +179,7 @@ export class PdfHighlighter extends PureComponent {
                 return;
             }
             const pages = getPagesFromRange(range);
-            if (!pages || pages.length === 0) {
+            if (!pages || pages.length === 0 || pages[0].number < 5) {
                 return;
             }
             const rects = getClientRects(range, pages);
